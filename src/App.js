@@ -65,14 +65,23 @@ function App() {
         return (
           <div className="contentBox">
             <h2>About Us</h2>
-            <p>This is the About section content placeholder.</p>
+            <p>Established in 2023, the Model United Nations Society at Dayananda Sagar University is committed to raising awareness about global events and influential personalities. Our mission centers on cultivating indispensable skills—diplomacy, leadership, research, and eloquence—crucial in navigating today’s complex world. In an era fraught with challenges, it is imperative to develop a perspective that accommodates all parties. Attacks on free speech, relics of a bygone era, must be consigned to history. As torchbearers of the next generation, we bear the responsibility of safeguarding principles bestowed upon us by democratic institutions, a free press, and international cooperation.</p>
           </div>
         );
       case 'dsumun-2':
         return (
           <div className="contentBox">
-            <h2>DSUMUN-2</h2>
-            <p>Details about DSUMUN-2 go here.</p>
+            <h2>DSUMUN-II</h2>
+            <p>It is with great enthusiasm and pride that MUNSOC from DSU, in collaboration with ORG Foundation, hosts the successor conference—DSUMUN Edition II: Beyond Borders. Our event aims to uphold the cornerstone principles of the United Nations in international relations and world peace, inspiring both national and international delegations. Staying true to contemporary relevance, our event seeks to bring together excitement and diplomacy through six distinct committees, each with its own unique procedures and perspectives on compelling global agendas.</p>
+            <p>Our Committees:</p>
+            <ul>
+              <li>Global 20 (G20)</li>
+              <li>United Nations Security Council (UNSC)</li>
+              <li>Disarmament and International Security Committee (DISEC)</li>
+              <li>United Nations Human Rights Council (UNHRC)</li>
+              <li>All India Political Parties Meet (AIPPM)</li>
+              <li>International Press Corps (IPC)</li>
+            </ul>
           </div>
         );
       case 'contact':
@@ -92,7 +101,6 @@ function App() {
       case 'team':
         return (
           <div className="contentBox team-section">
-            <h2 className="team-heading">Meet our team</h2><br />
             <section className="team-cards">
               {teamNames.map((name, index) => (
                 <section className="card" key={index}>

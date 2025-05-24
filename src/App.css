@@ -114,10 +114,36 @@ main {
   background-color: white;
 }
 
+@media(min-width: 1109px) {
+
+  .contentBox {
+    width: 70vw;
+    padding: 90px;
+  }
+
+  .contentBox p{
+    padding: 10px 70px;
+    text-align: justify;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+}
+
 /* Responsive nav */
 @media (max-width: 768px) {
   .navbar {
     width: 80%;
+  }
+
+  .contentBox {
+    width: 80vw;
+  }
+
+  .contentBox p {
+    padding: 5px 15px;
+    text-align: justify;
   }
 
   .team-section {
@@ -519,7 +545,6 @@ button.register-button:focus {
 
 .title {
   display: block;
-  font-weight: 500;
   color: #ccc;
   margin-bottom: 0.8rem;
 }
