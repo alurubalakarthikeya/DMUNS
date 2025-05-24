@@ -8,6 +8,9 @@ function App() {
 
   // Track which nav section is selected
   const [selectedSection, setSelectedSection] = useState('home'); // default to home
+  useEffect(() => {
+  document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+  }, [isOpen]);
 
   const teamNames = ["John Doe", "John Doe", "John Doe", "John Doe"];
   const roles = ["Founder & CEO", "Engineering Manager", "Product Designer", "Frontend Developer"];
