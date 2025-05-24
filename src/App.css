@@ -117,12 +117,34 @@ main {
 @media(min-width: 1109px) {
 
   .contentBox {
-    width: 70vw;
+    width: 60vw;
     padding: 90px;
   }
 
+  .home-section {
+    flex-direction: row;
+    gap: 150px;
+  }
+
+  .about-section, .dsumun-section, .contact-section, .events-section {
+    flex-direction: column;
+  }
+
+  .team-section{
+    width: 80vw;
+  }
+
+  .gallery-box {
+    width: 310px;
+    height: 310px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    position: relative;
+  }
+
   .contentBox p{
-    padding: 10px 70px;
     text-align: justify;
   }
 
@@ -139,6 +161,7 @@ main {
 
   .contentBox {
     width: 80vw;
+      flex-direction: column;
   }
 
   .contentBox p {
@@ -146,8 +169,29 @@ main {
     text-align: justify;
   }
 
+  .home-section {
+    margin-top: 20vh;
+  }
+
+  .dsumun-section {
+    margin-top: 30vh;
+  }
+
   .team-section {
-    margin-top: 75vh;
+    margin-top: 110vh;
+}
+
+  .events-section {
+    margin-top: 40vh;
+  }
+  .gallery-box {
+  width: 230px;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease;
+  position: relative;
 }
 
   .content {
@@ -368,7 +412,6 @@ button.register-button:focus {
 
 .contentBox {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
@@ -589,4 +632,73 @@ p.description {
 
 .social-links a:hover {
   color: #a57df4;
+}
+
+.gallery-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Smooth fade transition */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+/* Event Cards */
+.event-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.event-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 240px;
+  color: white;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.event-img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  border: 2px solid #a57df4;
+}
+
+.event-name {
+  display: block;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  color: #ffffff;
+}
+
+.event-date {
+  display: block;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 0.8rem;
+}
+
+.event-description {
+  font-size: 1.7vh;
+  margin-bottom: 1rem;
+}
+
+.register-button a{
+  color: #ccc;
+  text-decoration: none;
 }
