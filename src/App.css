@@ -62,7 +62,9 @@ body, html, #root, .App {
 }
 
 .nav-links {
+  width: 60%;
   display: flex;
+  justify-content: space-between;
   gap: 1rem;
 }
 
@@ -84,6 +86,13 @@ body, html, #root, .App {
   cursor: pointer;
 }
 
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
 .bar {
   width: 25px;
   height: 3px;
@@ -95,20 +104,53 @@ body, html, #root, .App {
   .navbar {
     width: 80%;
   }
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background: #1a0033;
-    flex-direction: column;
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    display: none;
-  }
 
-  .nav-links.open {
-    display: flex;
+  .intro {
+    align-items: center;
+    text-align: center;
   }
+.nav-links {
+  position: fixed;
+  top:  calc(100vh - 125px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(85, 0, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  border-radius: 11px;
+  width: 82%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(83, 0, 207, 0.2);
+  display: none;
+  transition: all 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.nav-links.open {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Optional: Animate the appearance */
+.nav-links li {
+  list-style: none;
+  margin: 0.8rem 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #ffccff;
+}
+
 
   .background {
     width: 100%;
@@ -126,8 +168,11 @@ body, html, #root, .App {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 50px);
-  background: rgba(85, 0, 255, 0.1);
+  height: calc(100vh - 45px);
+  background: url('https://cdna.artstation.com/p/assets/images/images/027/078/468/large/cedrik-pazmino-orboi.jpg?1590527121') no-repeat center center fixed;
+  backdrop-filter: blur(10px);
+  background-size: cover;
+  padding: 20px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   padding: 20px;
@@ -139,13 +184,15 @@ body, html, #root, .App {
 .background {
   display: flex;
   justify-content: center;
-  padding: 60px 40px 0px 40px;
+  align-items: center;
+  padding: 30px 40px;
+  gap: 30px;
   background: rgba(47, 0, 142, 0.2);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 4px 30px rgba(83, 0, 207, 0.1);
-  z-index: -1;
-  border: 1px solid rgba(182, 130, 255, 0.2);
+  z-index: 3;
+  border: 1px solid rgba(152, 111, 209, 0.304);
   border-radius: 20px;
 }
 
@@ -155,7 +202,7 @@ body, html, #root, .App {
   grid-template-columns: repeat(4, 40px);
   grid-template-rows: repeat(5, 40px);
   gap: 5px;
-  margin: 20px;
+  margin-top: 110px;
 }
 
 .cell {
@@ -186,3 +233,40 @@ body, html, #root, .App {
   }
 }
 
+.middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+button.register-button {
+  background-color: rgba(19, 0, 74, 0.8);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  border: 1px solid rgba(162, 47, 255, 0.39);
+  transition: 0.3s ease;
+}
+button.register-button:hover {
+  background-color: rgba(19, 0, 74, 0.6);
+  box-shadow: 0 0 5px rgba(162, 47, 255, 0.39);
+}
+button.register-button:active {
+  background-color: rgba(19, 0, 74, 0.4);
+}
+button.register-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(162, 47, 255, 0.39);
+}

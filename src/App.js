@@ -7,9 +7,9 @@ function App() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const letters = [
-    "", "D", "", "",
-    "", "S", "", "",
+    "", "", "", "D",
     "M", "U", "N", "S"
+    , "", "", "", "U",
   ];
 
   const [animate, setAnimate] = useState(false);
@@ -28,10 +28,16 @@ function App() {
           <span><span className='purple'>DSU</span>MUNS</span>
         </div>
         <div className={`nav-links ${isOpen ? 'open' : ''}`}>
+          <div className='middle'>
+          <a href="#home">Home</a>
           <a href="#about">About</a>
-          <a href="#committees">Committees</a>
-          <a href="#register">Register</a>
+          <a href="#dsumun-2">DSUMUN-2</a>
           <a href="#contact">Contact</a>
+          </div>
+          <div className='right'> 
+          <a href="#events">Events</a>
+          <a href="#team">Our Team</a>
+          </div>
         </div>
         <div className="menu-icon" onClick={toggleMenu}>
           <div className="bar"></div>
@@ -43,10 +49,10 @@ function App() {
       <main className="main-content">
         <div className="background">
         <div className = "intro">
-          <h1 className={`title ${animate ? 'animate' : ''}`}>Welcome to DSUMUNS</h1>
-          <p className={`subtitle ${animate ? 'animate' : ''}`}>Formal. Inspiring. Uniting Minds.</p>
+          <h1 className='title'>Welcome to DSUMUN III</h1>
+          <p className='subtitle'>Formal. Inspiring. Uniting Minds.</p>
+          <button className={`register-button ${animate ? 'animate' : ''}`} onClick={() => window.scrollTo({ top: document.getElementById('about').offsetTop, behavior: 'smooth' })}> Register Now</button>
         </div>
-
         <div className="grid-container">
           {letters.map((letter, index) => {
             const isEmpty = letter === "";
@@ -71,6 +77,9 @@ function App() {
             );
           })}
         </div>
+        </div>
+        <div className='images'>
+
         </div>
       </main>
     </div>
