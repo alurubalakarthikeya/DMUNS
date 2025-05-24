@@ -110,6 +110,13 @@ body, html, #root, .App {
     display: flex;
   }
 
+  .background {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
   .menu-icon {
     display: flex;
   }
@@ -117,10 +124,9 @@ body, html, #root, .App {
 
 .main-content {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 50px);
   background: rgba(85, 0, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -128,6 +134,19 @@ body, html, #root, .App {
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 30px rgba(83, 0, 207, 0.2);
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  padding: 60px 40px 0px 40px;
+  background: rgba(47, 0, 142, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(83, 0, 207, 0.1);
+  z-index: -1;
+  border: 1px solid rgba(182, 130, 255, 0.2);
+  border-radius: 20px;
 }
 
 
@@ -150,17 +169,20 @@ body, html, #root, .App {
   font-size: 20px;
 }
 
-.cell {
-  width: 40px;
-  height: 40px;
-  border: 2px solid #a57df4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 20px;
-}
-
 .empty {
   border: none;
 }
+
+.blink-letter {
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
